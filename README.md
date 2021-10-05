@@ -121,3 +121,8 @@ This project is licensed under the GNU General Public License v3.0
 
 * Danke an JFoenix für die zur verfügung stehende Demo, damit konnte man sich ein Bild machen wie die Elemente benutzt werden können
 
+
+## Developers
+- Mohamad Zarzar
+- Julian Altmayer
+

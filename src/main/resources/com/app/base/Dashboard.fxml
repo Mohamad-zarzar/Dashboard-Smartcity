@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.app.components.RoundedPane_Two_Values?>
+<?import com.app.components.RoundedPane_Seven_Values?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.geometry.Insets?>
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.DashboardOverviewController">
+    <ScrollPane fitToWidth="true" fx:id="scrollPane" hbarPolicy="NEVER">
+    <JFXMasonryPane fx:id="masonryPane">
+      <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+      <Pane styleClass="dashboard-pane-park">
+          <VBox style="-fx-padding: inherit">
+              <Label styleClass="heading-blue" fx:id="parkHeader"/>
+              <HBox fx:id="park" style="-fx-spacing: 10px">
+                  <RoundedPane_Two_Values fx:id="belegt" styleClass="dashboard-rounded-panel"/>
+                  <RoundedPane_Two_Values fx:id="frei" styleClass="dashboard-rounded-panel"/>
+               <!-- <RoundedPane_Two_Values fx:id="stoss" styleClass="dashboard-rounded-panel"/>  --> 
+              </HBox>
+          </VBox>
+      </Pane>
+
+      <Pane styleClass="dashboard-pane-temp">
+          <VBox style="-fx-padding: inherit">
+              <Label styleClass="heading-White" fx:id="tempHeader"/>
+              <VBox fx:id="tempV" style="-fx-spacing: 10px">
+              <HBox fx:id="temp" style="-fx-spacing: 10px">
+                  <RoundedPane_Two_Values fx:id="aktuell" styleClass="dashboard-rounded-panel-temp"/>
+                  <RoundedPane_Two_Values fx:id="hoechste" styleClass="dashboard-rounded-panel-temp"/>
+                  <JFXRippler position="BACK" styleClass="icons-rippler-rectangle" onMouseClicked="#mouseClickedTemp">
+                      <StackPane style="-fx-padding: 10;">
+                          <FontIcon iconLiteral="fa-bar-chart" iconSize="24"
+                                    styleClass="icon-white"/>
+                      </StackPane>
+                  </JFXRippler>
+              </HBox>
+                  <RoundedPane_Seven_Values fx:id="sevenValues" styleClass="dashboard-rounded-panel-temp"/>
+              </VBox>
+          </VBox>
+      </Pane>
+
+      <Pane styleClass="dashboard-pane-air">
+          <VBox style="-fx-padding: inherit">
+              <Label styleClass="heading" fx:id="airHeader"/>
+              <HBox fx:id="air" style="-fx-spacing: 10px" >
+                  <RoundedPane_Two_Values fx:id="qualiAkt" styleClass="dashboard-rounded-panel"/>
+              </HBox>
+          </VBox>
+      </Pane>
+  </JFXMasonryPane>
+    </ScrollPane>
+</StackPane>

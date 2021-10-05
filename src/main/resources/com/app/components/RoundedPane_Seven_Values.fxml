@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <VBox fx:id="box" style="-fx-alignment: center; -fx-text-fill: inherit; -fx-padding: 5px 5px 5px 5px">
+        <Label fx:id="text" style="-fx-text-fill: inherit; -fx-font-weight: bold"/>
+        <HBox style="-fx-spacing: 5px ; -fx-text-fill: inherit;">
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day1" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value1" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day2" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value2" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day3" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value3" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day4" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value4" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day5" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value5" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit">
+                <Label fx:id="day6" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value6" style="-fx-text-fill: inherit"/>
+            </VBox>
+            <VBox style="-fx-spacing: 5px; -fx-text-fill: inherit;">
+                <Label fx:id="day7" style="-fx-text-fill: inherit"/>
+                <Label fx:id="value7" style="-fx-text-fill: inherit"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</fx:root>

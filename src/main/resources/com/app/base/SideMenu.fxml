@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.app.components.IconLabel?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.app.controller.SideMenuController" styleClass="side-menu">
+    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER">
+        <VBox spacing="16" alignment="CENTER">
+            <JFXListView fx:id="sideList">
+                <IconLabel fx:id="dashboard" label="Dashboard" iconLiteral="fa-tachometer"/>
+                <IconLabel label="Temperatur" iconLiteral="fa-thermometer-empty"/>
+                <IconLabel label="Luftqualität" iconLiteral="fa-folder-open"/>
+                <IconLabel label="Parkplätze" iconLiteral="fa-search"/>
+                <IconLabel label="Karte" iconLiteral="fa-binoculars"/>
+            </JFXListView>
+            <Region VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </ScrollPane>
+</StackPane>

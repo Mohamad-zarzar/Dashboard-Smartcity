@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.HBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.app.components.RoundedPane_Two_Values?>
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.sun.javafx.scene.control.skin.TabPaneSkin.TabControlButtons?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import javafx.scene.layout.StackPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.scene.control.ScrollPane?>
+<BorderPane prefHeight="430.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.TemperaturOverviewController">
+      <top>
+         <Label fx:id="heading" text="Temperatur" styleClass="heading">
+             <BorderPane.margin>
+                 <Insets left="10"/>
+             </BorderPane.margin>
+         </Label>
+      </top>
+      <center>
+          <StackPane>
+              <ScrollPane fitToWidth="true" fx:id="scrollPane" hbarPolicy="NEVER">
+                  <JFXMasonryPane HSpacing="10" VSpacing="10">
+                      <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                      <VBox>
+                          <HBox spacing="10">
+                              <HBox spacing="10">
+                                  <JFXButton fx:id="heuteBtn" prefWidth="100" prefHeight="40" buttonType="FLAT" text="Heute" onAction="#heuteClickedTemp"
+                                             style="-fx-font-size:14px;" styleClass="temp-button"/>
+                                  <JFXButton fx:id="wocheBtn" prefWidth="100" prefHeight="40" buttonType="FLAT" text="Woche" onAction="#wocheClickedTemp"
+                                             style="-fx-font-size:14px;" styleClass="temp-button"/>
+                                  <JFXButton fx:id="monatBtn" prefWidth="100" prefHeight="40" buttonType="FLAT" text="Monat" onAction="#monatClickedtemp"
+                                             style="-fx-font-size:14px;" styleClass="temp-button"/>
+                              </HBox>
+                              <VBox alignment="TOP_RIGHT">
+                                  <JFXDatePicker fx:id="startDate" promptText="Anfangsdatum" onAction="#startTemp" styleClass="custom-color-picker"/>
+                                  <JFXDatePicker fx:id="endDate" promptText="Enddatum" onAction="#startTemp" styleClass="custom-color-picker"/>
+                              </VBox>
+                          </HBox>
+                          <HBox spacing="10">
+                              <RoundedPane_Two_Values fx:id="avgTemp" styleClass="temp-layout-pane"/>
+                              <RoundedPane_Two_Values fx:id="heighestTemp" styleClass="temp-layout-pane"/>
+                          </HBox>
+                          <HBox>
+                              <Pane minWidth="500" minHeight="400">
+                                  <LineChart fx:id="tempLineChart">
+                                      <xAxis>
+                                          <CategoryAxis endMargin="20.0" label="Tage" tickLabelFill="#313030" />
+                                      </xAxis>
+                                      <yAxis>
+                                          <NumberAxis label="Gard (C)" side="LEFT" tickLength="5.0" upperBound="50.0" />
+                                      </yAxis>
+                                  </LineChart>
+                              </Pane>
+                          </HBox>
+                      </VBox>
+                      <VBox>
+                          <BorderPane style="-fx-background-color: #3994D1">
+                              <left>
+                                  <JFXRippler position="BACK" styleClass="icons-rippler" onMouseClicked="#backArrow">
+                                      <StackPane style="-fx-padding: 10;">
+                                          <FontIcon iconLiteral="fa-arrow-left" iconSize="24" styleClass="icon-white"/>
+                                      </StackPane>
+                                  </JFXRippler>
+                              </left>
+                              <center>
+                                  <Label fx:id="sensorID" text="ID" style="-fx-text-fill: white; -fx-font-weight: bold"/>
+                              </center>
+                              <right>
+                                  <JFXRippler position="BACK" styleClass="icons-rippler" onMouseClicked="#forwardArrow">
+                                      <StackPane style="-fx-padding: 10;">
+                                          <FontIcon iconLiteral="fa-arrow-right" iconSize="24" styleClass="icon-white"/>
+                                      </StackPane>
+                                  </JFXRippler>
+                              </right>
+                          </BorderPane>
+                          <JFXTreeTableView fx:id="tempSensorListe">
+                              <columns>
+                                  <JFXTreeTableColumn fx:id="datum"
+                                                      minWidth="133" text="Zeit" prefWidth="133"
+                                                      resizable="false"></JFXTreeTableColumn>
+                                  <JFXTreeTableColumn fx:id="data"
+                                                      minWidth="133" text="Temperatur" prefWidth="133"
+                                                      resizable="false"></JFXTreeTableColumn>
+                              </columns>
+                          </JFXTreeTableView>
+                          <JFXButton fx:id="loadMore" text="mehr" styleClass="temp-button" onAction="#loadMore"/>
+                      </VBox>
+                  </JFXMasonryPane>
+              </ScrollPane>
+          </StackPane>
+      </center>
+</BorderPane>

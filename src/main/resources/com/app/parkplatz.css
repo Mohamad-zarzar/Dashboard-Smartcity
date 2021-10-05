@@ -1,0 +1,177 @@
+.grid-pane  {
+	
+	-fx-background-image: url("../../com/app/imgs/parking.png");	
+}
+
+
+.check-box > .box   {
+    -fx-background-color: transparent;
+ }
+.check-box:selected > .box > .mark {
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+    -fx-background-color: green;
+ }
+
+.check-box > .box > .mark {
+     -fx-shape: "M2,0L5,4L8,0L10,0L10,2L6,5L10,8L10,10L8,10L5,6L2,10L0,10L0,8L4,5L0,2L0,0Z";
+     -fx-background-color: red;
+ }
+ 
+
+ /*******************************************************************************
+ *                                                                             *
+ * Scroll Bar			                                                       *
+ *                                                                             *
+ ******************************************************************************/
+.scroll-bar {
+	-fx-background-color: transparent;
+	-fx-background-radius: 2.0em;
+}
+
+.scroll-bar:vertical>.track-background, .scroll-bar:horizontal>.track-background
+	{
+	-fx-background-color: transparent;
+	-fx-background-insets: 0.0;
+}
+
+.scroll-bar:vertical>.thumb, .scroll-bar:horizontal>.thumb {
+	-fx-background-color: #BCBCBC;
+	-fx-background-insets: 0.0;
+	-fx-background-radius: 1.0;
+}
+
+.scroll-bar:horizontal .thumb:hover, .scroll-bar:vertical .thumb:hover {
+	-fx-background-color: rgb(231.0, 231.0, 231.0);
+}
+
+.table-view .scroll-bar:horizontal .thumb:pressed, .scroll-bar:vertical .thumb:pressed
+	{
+	-fx-background-color: rgb(255.0, 255.0, 255.0);
+}
+
+/* Up- and Down-Button Padding */
+.scroll-bar:vertical>.increment-button, .scroll-bar:vertical>.decrement-button
+	{
+	-fx-padding: 5.0 2.0 5.0 2.0;
+}
+
+/* Left- and Right-Button Padding */
+.scroll-bar:horizontal>.increment-button, .scroll-bar:horizontal>.decrement-button
+	{
+	-fx-padding: 2.0 5.0 2.0 5.0;
+}
+
+.scroll-bar>.increment-button, .scroll-bar>.decrement-button,
+	.scroll-bar:hover>.increment-button, .scroll-bar:hover>.decrement-button
+	{
+	-fx-background-color: transparent;
+}
+
+.scroll-bar>.increment-button>.increment-arrow, .scroll-bar>.decrement-button>.decrement-arrow
+	{
+	-fx-background-color: rgb(150.0, 150.0, 150.0);
+}
+
+/* Up Arrow */
+.scroll-bar:vertical>.increment-button>.increment-arrow {
+	-fx-shape: "M298 426h428l-214 214z";
+}
+
+/* Down Arrow */
+.scroll-bar:vertical>.decrement-button>.decrement-arrow {
+	-fx-shape: "M298 598l214-214 214 214h-428z";
+}
+
+/* Right Arrow */
+.scroll-bar:horizontal>.increment-button>.increment-arrow {
+	-fx-shape: "M0 428l0 -428l214 214l-214 214z";
+}
+
+/* Left Arrow */
+.scroll-bar:horizontal>.decrement-button>.decrement-arrow {
+	-fx-shape: "M214 0l0 428l-214 -214l214 -214z";
+}
+
+
+
+.text-area   {
+    -fx-text-fill: black;
+    -fx-font-size: 14.0px;
+}
+
+
+
+/**************************** */
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+   -fx-background-color:   #3F4040;
+   -fx-background-radius: 20.0;
+    
+}
+.table-view {
+	
+	-fx-background-color:   linear-gradient(to left bottom, rgb(255.0,255.0,255.0,0.8),rgb(255.0,255.0,255.0,0.8),rgb(255.0,255.0,255.0,0.8));
+	-fx-border-radius: 15 15 0 0;
+    -fx-background-radius:  15 15 0 0 
+    
+}
+
+.table-view .column-header .label {
+	 
+	-fx-font-size: 16.0px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+       
+    
+}
+
+.table-row-cell {    
+    -fx-background-color: transparent;
+}
+.table-cell {
+	-fx-background-color: transparent;
+}
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-box-border, #FCCC00;
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected:hover {    
+    -fx-background-color: #FCCC00;
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: #FCCC00;
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+
+.table-view:focused .table-row-cell:filled:selected {    
+    -fx-background-color: #FCCC00;
+    -fx-background-insets: 0,1 1 1 1 0;
+}
+ 
+ 
+ 
+ 
+.box {
+    -fx-background-radius: 20.0px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.4), 10.0, 0.0, 0.0, 0.0);
+    -fx-background-color: rgb(255.0,255.0,255.0,0.4);
+}
+
+#titles { 
+    -fx-background-color: rgb(98,128,155,0.4);
+}
+
+
+.box-top-pane {
+    -fx-background-radius: 20.0px 20.0px 0.0 0.0
+}
+
+
+ 
